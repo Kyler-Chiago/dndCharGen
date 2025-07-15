@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
+  /* --background: #ffffff; */
+  --background: #0a0a0a;
   --foreground: #171717;
 }
 
@@ -15,7 +16,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --foreground: #ededed; */
   }
 }
 
@@ -41,25 +42,32 @@ body {
 .charWrapper {
   grid-column: 2;
   grid-row: 0;
-  background-color: green;
+  width: 100%;
+  height: 100%;
+  /* background-color: green; */
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 60px 1fr 60px;
 }
 
 .headerWrapper {
-  background-color: red;
-  grid-template-columns: 1;
-  grid-template-rows: 1;
+  /* background-color: red; */
   display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  grid-template-columns: 35% 30% 35%;
+  grid-template-rows: 100%;
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-items: center;
+  /* align-content: ; */
 }
 
 .mainWrapper {
-  background-color: green;
-  grid-template-columns: 1;
-  grid-template-rows: 2;
+  /* background-color: green; */
+  grid-column: 1;
+  grid-row: 2;
   /* display: grid; */
   width: 100%;
   height: 100%;
@@ -67,12 +75,13 @@ body {
 }
 
 .footerWrapper {
-  background-color: rgb(9, 0, 128);
-  grid-template-columns: 1;
-  grid-template-rows: 3;
+  /* background-color: rgb(9, 0, 128); */
+  grid-column: 1;
+  grid-row: 3;
   display: grid;
   width: 100%;
   height: 100%;
+  padding: 0px 10px;
 }
 
 .genButton {
@@ -84,6 +93,11 @@ body {
   border-radius: 5px;
   padding: 5px;
   background-color: teal;
+  justify-self: center;
+  align-self: center;
+  /* grid-column: 2; */
+  /* align-self: start; */
+  /* align-self: end; */
 }
 
 .species {
@@ -91,4 +105,58 @@ body {
   /* background-color: orange; */
   width: 100%;
   height: fit-content;
+}
+
+.abilityScores {
+  display: grid;
+  grid-template-columns: 30px 30px 30px 30px 30px 30px 1fr;
+  grid-template-rows: 30px 30px;
+  /* align-items: center; */
+  align-content: center;
+}
+
+.abilityScoreBox {
+  background-color: teal;
+  align-self: center;
+  text-align: center;
+  border: 1px solid black;
+  grid-row: 2;
+  /* align-items: center; */
+}
+
+.abilityRollType {
+  grid-row: 1;
+  grid-column: 1/7;
+}
+
+.centerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* vertical-align: center; */
+  /* align-self: center; */
+  /* justify-self: center; */
+  border: 3px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+#parchment {
+  /* position: absolute; */
+  grid-column: 1;
+  grid-row: 1/4;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* display: flex; */
+  /* width: 75%; */
+  /* min-height: calc((1vw + 1vh) * 75); */
+  /* center page with absolute position */
+  /* top: 0%; left: 50%; transform: translate(-50%, 0); */
+  /* margin: 2em 0; */
+  /* padding: 4em; */
+  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+  background: #fffef0;
+  filter: url(#wavy2);
 }
