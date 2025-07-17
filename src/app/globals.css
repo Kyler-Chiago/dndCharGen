@@ -95,6 +95,7 @@ body {
   background-color: teal;
   justify-self: center;
   align-self: center;
+  z-index: 1;
   /* grid-column: 2; */
   /* align-self: start; */
   /* align-self: end; */
