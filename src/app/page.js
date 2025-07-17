@@ -600,7 +600,7 @@ export default function Home() {
             } else if (randomSN <= 885) {
               setSpecies('Loxodon');
             } else if (randomSN <= 890) {
-              setSpecies('Simir Hybrid');
+              setSpecies('Simic Hybrid');
             } else if (randomSN <= 895) {
               setSpecies('Vedalken');
             } else if (randomSN <= 897) {
