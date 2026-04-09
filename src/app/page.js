@@ -124,9 +124,9 @@ export default function Home() {
 
             console.log('Sexual Attraction');
             let randomSAN = Math.floor(Math.random() * 100) + 1;
-            if (randomSAN <= 70) {
+            if (randomSAN <= 55) {
               setSexualAttraction('Heterosexual');
-            } else if (randomSAN <= 80) {
+            } else if (randomSAN <= 67) {
               setSexualAttraction('Gay/Lesbian');
             } else if (randomSAN <= 97) {
               setSexualAttraction('Bisexual/Pansexual');
